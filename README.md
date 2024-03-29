@@ -1,1 +1,1 @@
-# PDF-Manipulator-Webapp
+PDF Manipulator Webapp has got various functionalities. It's frontend has been designed and developed using HTML, CSS and Javascript and the backend has been developed using NodeJs. This application can merge two pdfs, can convert any format to pdf, can convert pdf to docx, xlsx and ppt formats.
