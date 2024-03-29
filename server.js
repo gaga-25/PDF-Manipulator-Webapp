@@ -56,7 +56,7 @@ app.post('/convertPdfToDoc', upload3.single('file'), async(req, res, next) =>{
     const filename = req.file.originalname.substring(0,req.file.originalname.lastIndexOf("."))
     const inputPath = path.join(__dirname, req.file.path);
     const outputPath = path.resolve(__dirname, `./files3/${filename}.docx`);
-    await PDFNet.addResourceSearchPath('./');
+    await PDFNet.addResourceSearchPath('./StructuredOutputWindows/Lib/Windows/');
     if (!(await PDFNet.StructuredOutputModule.isModuleAvailable())) {
       return;
     }
@@ -77,7 +77,7 @@ app.post('/convertPdfToExcel', upload4.single('file'), async(req, res, next) =>{
     const filename = req.file.originalname.substring(0,req.file.originalname.lastIndexOf("."))
     const inputPath = path.join(__dirname, req.file.path);
     const outputPath = path.resolve(__dirname, `./files4/${filename}.xlsx`);
-    await PDFNet.addResourceSearchPath('./');
+    await PDFNet.addResourceSearchPath('./StructuredOutputWindows/Lib/Windows/');
     if (!(await PDFNet.StructuredOutputModule.isModuleAvailable())) {
       return;
     }
@@ -99,7 +99,7 @@ app.post('/convertPdfToPpt', upload5.single('file'), async(req, res, next) =>{
     const filename = req.file.originalname.substring(0,req.file.originalname.lastIndexOf("."))
     const inputPath = path.join(__dirname, req.file.path);
     const outputPath = path.resolve(__dirname, `./files5/${filename}.pptx`);
-    await PDFNet.addResourceSearchPath('./');
+    await PDFNet.addResourceSearchPath('./StructuredOutputWindows/Lib/Windows/');
     if (!(await PDFNet.StructuredOutputModule.isModuleAvailable())) {
       return;
     }
